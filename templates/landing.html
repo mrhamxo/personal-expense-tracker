@@ -2,81 +2,108 @@
 
 {% block title %}Expensebook — Track Every Rupee{% endblock %}
 
+{% block description %}Expensebook is a free personal expense tracker. Log expenses, understand your spending patterns and stay on budget, without the spreadsheet headache.{% endblock %}
+
 {% block content %}
 
 <section class="hero">
     <div class="hero-inner">
-        <div class="hero-badge">Personal Finance Tracker</div>
+        <div class="hero-badge"><span class="hero-badge-dot"></span>Free to use · No credit card needed</div>
         <h1 class="hero-title">
-            Know where your<br>
-            <em>money goes</em>
+            Track every rupee.<br>
+            <span>Know where it goes.</span>
         </h1>
         <p class="hero-subtitle">
-            Log expenses, understand your spending patterns,
-            and take control of your financial life —
-            one transaction at a time.
+            Expensebook helps you log expenses, spot patterns, and stay
+            on budget — without the spreadsheet headache.
         </p>
         <div class="hero-actions">
-            <a href="{{ url_for('register') }}" class="btn-primary">Start tracking free</a>
-            <a href="{{ url_for('login') }}" class="btn-ghost">Sign in</a>
+            <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
+            <a href="#how-it-works" class="btn-primary">See how it works</a>
         </div>
     </div>
     <div class="hero-visual">
-        <div class="mock-card">
-            <div class="mock-card-header">
-                <span class="mock-label">March 2026</span>
-                <span class="mock-total">₹12,450</span>
+        <div class="dash-window">
+            <div class="dash-dots"><span></span><span></span><span></span></div>
+            <div class="dash-stats">
+                <div class="dash-stat">
+                    <div class="dash-stat-label">This month</div>
+                    <div class="dash-stat-value">₹18,240</div>
+                    <div class="dash-stat-note up">+12% vs last</div>
+                </div>
+                <div class="dash-stat">
+                    <div class="dash-stat-label">Budget left</div>
+                    <div class="dash-stat-value">₹6,760</div>
+                    <div class="dash-stat-note ok">43% remaining</div>
+                </div>
+                <div class="dash-stat">
+                    <div class="dash-stat-label">Transactions</div>
+                    <div class="dash-stat-value">34</div>
+                    <div class="dash-stat-note">this month</div>
+                </div>
             </div>
-            <div class="mock-bars">
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Bills</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar" style="width: 72%"></div>
-                    </div>
-                    <span class="mock-amt">₹4,500</span>
+            <div class="dash-bars">
+                <div class="dash-bar-row">
+                    <span class="dash-bar-cat">Food</span>
+                    <div class="dash-bar-track"><div class="dash-bar" style="width: 72%"></div></div>
                 </div>
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Food</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-2" style="width: 52%"></div>
-                    </div>
-                    <span class="mock-amt">₹3,200</span>
+                <div class="dash-bar-row">
+                    <span class="dash-bar-cat">Travel</span>
+                    <div class="dash-bar-track"><div class="dash-bar dash-bar-2" style="width: 48%"></div></div>
                 </div>
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Health</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-3" style="width: 33%"></div>
-                    </div>
-                    <span class="mock-amt">₹2,050</span>
-                </div>
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Transport</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-4" style="width: 28%"></div>
-                    </div>
-                    <span class="mock-amt">₹1,800</span>
+                <div class="dash-bar-row">
+                    <span class="dash-bar-cat">Bills</span>
+                    <div class="dash-bar-track"><div class="dash-bar dash-bar-3" style="width: 38%"></div></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="features">
+<section class="features" id="features">
+    <div class="section-header">
+        <h2 class="section-title">Everything you need to manage your money</h2>
+        <p class="section-subtitle">Simple tools to log, understand and review your spending.</p>
+    </div>
     <div class="features-inner">
         <div class="feature-card">
-            <div class="feature-icon">₹</div>
+            <div class="feature-icon" aria-hidden="true">₹</div>
             <h3 class="feature-title">Log expenses instantly</h3>
             <p class="feature-body">Add any expense in seconds. Category, amount, date, description — all in one simple form.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">◎</div>
+            <div class="feature-icon" aria-hidden="true">◎</div>
             <h3 class="feature-title">Understand your patterns</h3>
             <p class="feature-body">See exactly where your money goes with category breakdowns and monthly summaries.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">◷</div>
+            <div class="feature-icon" aria-hidden="true">◷</div>
             <h3 class="feature-title">Filter by time period</h3>
             <p class="feature-body">View your spending for any date range — last week, last month, or a custom period.</p>
+        </div>
+    </div>
+</section>
+
+<section class="steps" id="how-it-works">
+    <div class="section-header">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-subtitle">Get started in three simple steps.</p>
+    </div>
+    <div class="steps-inner">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Create your account</h3>
+            <p class="step-body">Sign up for free in under a minute. No credit card needed.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Log your expenses</h3>
+            <p class="step-body">Add what you spend with a category, amount and date.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">See where it goes</h3>
+            <p class="step-body">Review summaries and filter by any time period to stay on budget.</p>
         </div>
     </div>
 </section>
@@ -84,7 +111,7 @@
 <section class="cta-section">
     <div class="cta-inner">
         <h2 class="cta-title">Ready to take control?</h2>
-        <p class="cta-body">Join thousands of people who track their expenses with Expensebook.</p>
+        <p class="cta-body">Start tracking your expenses with Expensebook today.</p>
         <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
     </div>
 </section>
